@@ -651,6 +651,7 @@ input[type="radio"]:active {
   display: inline-block;
   vertical-align: middle;
   margin-right: 4px;
+  margin-top: -5px;
   width: 19px;
   height: 20px;
   background: url(../img/box.png) no-repeat 0 0;
@@ -2244,7 +2245,7 @@ input[type="radio"]:active {
   background-color: #1a2791;
 }
 .actions__link:hover {
-  color: #afb5e8;
+  color: #ffffff;
 }
 .actions__text {
   font-size: 12.000002px;
