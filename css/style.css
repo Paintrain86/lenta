@@ -58,7 +58,7 @@ input[type="radio"]:active {
   font-size: 18px;
   color: #000000;
   text-transform: uppercase;
-  border-bottom: 1px solid #000000;
+  border-bottom: 2px solid #000000;
   margin: 0 0 20px 0;
   padding-bottom: 10px;
 }
@@ -1568,14 +1568,14 @@ input[type="radio"]:active {
   width: 20px;
   height: 20px;
   border: 1px solid #959595;
-  background: #1a2791;
+  background: #ffffff;
 }
 .carousel-slide .carousel-indicators li:hover {
   background: #afb5e8;
 }
 .carousel-slide .carousel-indicators li.active {
   margin: 1px;
-  background: #ffffff;
+  background: #1a2791;
 }
 .carousel-slide .carousel-control {
   background: none;
