@@ -1,6 +1,6 @@
 // main: ../style.less
 .sidebar {
-  width: 325px;
+  width: 320px;
   min-height: 1px;
   padding-right: @pad;
   margin-right: 13px;
@@ -14,5 +14,44 @@
   &__title {
     font-size: @fs-large;
     padding-bottom: @pad;
+  }
+  &__categories{
+    margin-bottom: @pad*3;
+    &-title{
+      line-height: 67px;
+      color: @color-inverse;
+      text-transform: uppercase;
+      background-color: #a5a8bc;
+      padding: 0 20px;
+      margin: 0;
+    }
+    &-ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      & > li{
+        padding: @pad @pad/1.5;
+        border-bottom: 1px solid #dbdbdb;
+        line-height: 1;
+        margin: 0;
+        & > a{
+          color: #3f4470;
+          text-decoration: none;
+          &:hover{
+            color: @color-info;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__block{
+    & img + p{
+      margin-top: @pad/1.5;
+    }
+    &+&{
+      margin-top: @pad*3;
+    }
   }
 }

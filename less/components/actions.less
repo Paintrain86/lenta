@@ -1,0 +1,41 @@
+// main: ../style.less
+
+.actions{
+  margin-bottom: @pad*3;
+  &__item{
+    text-align: right;
+  }
+  &__link{
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: @color-inverse;
+    text-transform: uppercase;
+    font-family: @ff-extra;
+    font-size: 30px;
+    line-height: 40px;
+    background-color: @color-green;
+    padding-right: @pad/1.5;
+    margin-bottom: @pad/1.5;
+    margin-left: @pad;
+    &::before{
+      display: block;
+      content: "";
+      width: 103px;
+      height: 71px;
+      background: url("../img/action.png") no-repeat 0 0;
+      position: absolute;
+      left: -@pad;
+      top: -@pad/1.5;
+    }
+    &--blue{
+      background-color: @color-primary;
+    }
+    &:hover{
+      color: @color-info;
+    }
+  }
+  &__text{
+    font-size: @fs-small;
+  }
+}

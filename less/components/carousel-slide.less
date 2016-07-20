@@ -1,16 +1,21 @@
 // main: ../style.less
 
 .carousel-slide {
-  margin-bottom: @pad * 2;
+  margin-bottom: @pad*3;
 
   .carousel-indicators {
     bottom: 5px;
     margin-bottom: 0;
+    left: 15px;
+    right: auto;
+    margin: 0;
+    text-align: left;
 
     li {
-      width: 15px;
-      height: 15px;
-      border: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid @color-gray-light;
+
       background: @color-primary;
 
       &:hover {
@@ -18,7 +23,8 @@
       }
 
       &.active {
-        background: @color-decor;
+        margin: 1px;
+        background: @color-inverse;
       }
     }
   }
@@ -26,28 +32,4 @@
   .carousel-control {
     background: none;
   }
-
-  // &__control {
-  //   display: block;
-  //   width: 25px;
-  //   height: 25px;
-  //   border-radius: 50%;
-  //   background: @color-primary;
-  //   opacity: 1;
-  //   position: absolute;
-  //   top: 50%;
-  //   margin-top: -12.5px;
-  //   line-height: 25;
-  //   text-align: center;
-  //   font-size: 16px;
-  //   color: @color-inverse;
-  //
-  //   &--prev {
-  //     left: 10px;
-  //   }
-  //
-  //   &--next {
-  //     right: 10px;
-  //   }
-  // }
 }

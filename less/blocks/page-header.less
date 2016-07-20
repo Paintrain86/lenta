@@ -19,7 +19,7 @@
     width: 100%;
     left: 0;
     top: 0;
-    z-index: 5;
+    z-index: 10000;
   }
   &__nav-list {
     .ul-inline();
@@ -79,5 +79,16 @@
   &__logo{
     display: block;
     padding-top: @pad/1.5;
+    position: relative;
+    &::after{
+      display: block;
+      content: "";
+      width: 71px;
+      height: 56px;
+      background: url("../img/logo_opt.png") no-repeat 0 0;
+      position: absolute;
+      top: @pad/3;
+      right: -@pad;
+    }
   }
 }
