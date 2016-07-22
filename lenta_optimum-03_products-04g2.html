@@ -31,17 +31,13 @@
         </div>
         <div class="col-xs-6 user__block pull-right text-right">
           <ul class="user__block-list">
-            <li class="user__block-item  user__block-item--name">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <a href="#">Абдурахмангаджи </a>
+            <li class="user__block-item  user__block-item--reg">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+              <a href="#">Регистрация</a>
             </li>
-            <li class="user__block-item  user__block-item--orders">
-              <i class="fa fa-th-list" aria-hidden="true"></i>
-              <a href="#">Мои заказы</a>
-            </li>
-            <li class="user__block-item  user__block-item--login">
-              <i class="fa fa-power-off" aria-hidden="true"></i>
-              <a href="#">Выход</a>
+            <li class="user__block-item  user__block-item--authorization">
+              <i class="fa fa-key" aria-hidden="true"></i>
+              <a href="#">Авторизация</a>
             </li>
           </ul>
         </div>
@@ -92,7 +88,7 @@
         <div class="catlist">
           <div class="catlist__inner">
             <div class="catlist__title dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полный каталог товаров</a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
               <ul class="dropdown-menu">
                 <li class="catalog__item-name--promo active"><a href="#">Промо-предложения</a></li>
                 <li><a href="#">Вина</a></li>
@@ -135,7 +131,11 @@
 
   <div class="main-content">
     <div class="container">
+
+      <div class="sales-text">Все указанные цены не являются окончательными. Поторгуемся? <a href="#">Зарегистрируйтесь</a> и станьте участником программы Лента ОПТИМУМ</div>
+
       <div class="sidebar">
+        <h4 class="heading--small">Подбор товаров</h4>
         <form class="filter" action="#" method="get">
           <div class="filter__block">
             <a href="#" class="filter__dropdown-toggle">Бренд</a>
@@ -183,11 +183,11 @@
               <div class="filter__range range">
                 <div class="range__controls">
                   <div id="price-range" class="range__slider">
-                    <span class="range__step range__step--0">0</span>
-                    <span class="range__step range__step--1">750</span>
-                    <span class="range__step range__step--2">1500</span>
-                    <span class="range__step range__step--3">2250</span>
-                    <span class="range__step range__step--4">2999</span>
+                    <span class="range__step range__step--0"></span>
+                    <span class="range__step range__step--1"></span>
+                    <span class="range__step range__step--2"></span>
+                    <span class="range__step range__step--3"></span>
+                    <span class="range__step range__step--4"></span>
                   </div>
                 </div>
                 <div class="range__price-inputs">
@@ -204,27 +204,17 @@
             </div>
           </div>
           <div class="filter__btn-group btn-group">
-            <button type="submit" class="btn btn-custom  btn-custom--wide">Применить</button>
+            <button type="submit" class="btn btn-custom">Применить</button>
             <button type="reset" class="btn btn-custom  btn-custom--gray">Сбросить</button>
           </div>
         </form>
       </div>
       <main class="contentarea">
+        <h1 class="heading--small">Бытовая химия, хозяйственные товары </h1>
+
         <div class="row">
-          <div class="col-xs-8">
-            <h1 class="pg-title">Бытовая химия, хозяйственные товары </h1>
-          </div>
-          <div class="col-xs-4 pull-right text-right">
-            <div class="cat-toggle">
-              <span><small>Вид каталога:</small></span>
-              <a href="" class="cat-toggle__view cat-toggle__view--card"></a>
-              <a href="" class="cat-toggle__view cat-toggle__view--list  active"></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-6">
-            <ul class="paginator  paginator--top list-inline">
+          <div class="paginator__block col-xs-4">
+            <ul class="paginator paginator--top list-inline">
               <li class="paginator__item">
                 <a href="">Предыдущая</a>
               </li>
@@ -238,7 +228,12 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-6 pull-right text-right sorter">
+          <div class="cat-toggle pull-right text-right">
+              <span><small>Вид каталога:</small></span>
+              <a href="" class="cat-toggle__view cat-toggle__view--card"></a>
+              <a href="" class="cat-toggle__view cat-toggle__view--list  active"></a>
+          </div>
+          <div class="col-xs-5 pull-right text-right sorter">
             <select name="sort-price" id="sort-price" class="select-custom">
               <option value="value1">Дешевле &rarr; дороже</option>
               <option value="value2">Быстрее &rarr; медленнее</option>
@@ -254,7 +249,7 @@
             </select>
           </div>
         </div>
-        <section class="goods  goods--mini">
+        <section class="goods">
           <div class="row">
             <div class="col-xs-4 goods__item">
               <a href="" class="goods__name">Средство для мытья посуды FAIRY, нежные руки ромашка...</a>
@@ -273,32 +268,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -317,32 +293,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -362,32 +319,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
           </div>
@@ -409,32 +347,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -454,32 +373,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -499,32 +399,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
           </div>
@@ -545,32 +426,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -589,32 +451,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -633,32 +476,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
           </div>
@@ -679,32 +503,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -723,32 +528,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -767,32 +553,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
           </div>
@@ -813,32 +580,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -857,32 +605,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
             <div class="col-xs-4 goods__item">
@@ -901,32 +630,13 @@
               </div>
               <div class="goods__buy clearfix">
                 <div class="goods__box">
-                  <span class="goods__box-img"></span>
+                  <span class="goods__box-img" data-toggle="tooltip" title="Количество в упаковке"></span>
                   <span>777 шт.</span>
                 </div>
                 <div class="goods__scales">
-                  <span class="goods__scales-img"></span>
+                  <span class="goods__scales-img" data-toggle="tooltip" title="Вес упаковки"></span>
                   <span>6666,02 кг</span>
                 </div>
-              </div>
-              <div class="goods__footer clearfix">
-                <div class="goods__count clearfix">
-                  <div class="goods__count-input">
-                    <span class="number-custom">
-                        <input type="number" min="1" max="240" value="155">
-                      </span>
-                    <span>уп.</span>
-                  </div>
-                  <span>
-                      444шт.
-                    </span>
-                </div>
-                <div class="goods__summ">
-                  9 999 999.03 <i class="fa fa-rub" aria-hidden="true"></i>
-                </div>
-                <a href="" class="goods__btn btn btn-default">
-                    В корзину
-                  </a>
               </div>
             </div>
           </div>

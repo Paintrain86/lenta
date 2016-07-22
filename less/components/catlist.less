@@ -14,10 +14,14 @@
     position: relative;
     & > a {
       display: block;
-      font-size: @fs * 1.714286;
-      line-height: 40px;
-      font-family: @ff-extra;
+      font-size: 18px;
+      line-height: 67px;
+      font-family: 'Arial', sans-serif;;
       text-transform: uppercase;
+      color: @color-inverse;
+      background-color: #a5a8bc;
+      padding: 0 20px;
+      margin: 0;
       &:hover,
       &:visited {
         color: @color-primary;
@@ -25,11 +29,11 @@
     }
     &.open > a,
     &.open > a:visited {
-      color: @color-info;
+      color: @color-inverse;
     }
     &--no-dropdown.open > a,
     &--no-dropdown.open > a:visited{
-      color: @color-primary;
+      color: @color-inverse;
     }
 
     &::after{
@@ -38,6 +42,7 @@
       content: "\f103";
       font-size: @fs * 1.714286;
       cursor: pointer;
+      color: @color-inverse;
 
       position: absolute;
       top: 50%;
@@ -59,60 +64,36 @@
       padding-right: 40px;
     }
     & .dropdown-menu {
+      margin: 0;
+      padding: 0;
       border: 0;
       border-radius: 0;
-      margin: 0;
-      border-top: 2px solid @color-inverse;
+      border-left: 1px solid #dbdbdb;
+      border-right: 1px solid #dbdbdb;
       box-shadow: none;
-      background-color: #e7ecf4;
+      background-color: @color-inverse;
       width: 100%;
-      padding-bottom: @pad;
-      & > li {
-        padding-top: 1px;
-        padding-bottom: 1px;
-      }
-      & > li > a{
-        display: block;
-        color: @color-primary;
-        padding-left: @pad*2;
-        padding-right: @pad*2;
-        text-decoration: none;
-      }
-      & > li:hover > a{
-        background-color: #f9f9f9;
+      & > li{
+        padding: 13px @pad/3;
+        border-bottom: 1px solid #dbdbdb;
+        line-height: 1;
+        margin: 0;
+        & > a{
+          line-height: 1;
+          padding: 0 0 0 @pad/1.5;
+          color: #3f4470;
+          text-decoration: none;
+          &:hover{
+            background-color: transparent;
+            color: @color-info;
+            text-decoration: none;
+          }
+        }
       }
       & > .active > a{
-        background-color: transparent;;
-        color: @color-primary;
+        background-color: transparent;
         font-weight: 700;
       }
-      &::after{
-        display: block;
-        content: "";
-        width: 0;
-        height: 0;
-        border-left: 155px solid transparent;
-        border-right: 155px solid transparent;
-        border-top: 55px solid #e7ecf4;
-
-        position: absolute;
-        left: 0;
-        bottom: -55px;
-      }
     }
-    &--no-dropdown{
-      &:after {
-        content: "";
-      }
-      & > .dropdown-menu{
-        display: block !important;
-      }
-    }
-  }
-
-  &__subtitle{
-    font-weight: 700;
-    text-transform: uppercase;
-    padding: 20px @pad*2 0;
   }
 }

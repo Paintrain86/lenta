@@ -80,7 +80,25 @@ $(function() {
 
   $(window).scroll(function() {
     // Sticky menu appearance
-    if ($(this).scrollTop() > headerHeight) {
+    stickyHeader($(this));
+
+    // Arrow Up appearance
+    if ($(this).scrollTop() > 350) {
+      $("#arrowUp").fadeIn();
+    } else {
+      $("#arrowUp").fadeOut();
+    }
+  });
+
+  $(window).resize( function(){
+    stickyHeader($(this));
+    $(window).scroll(function(){
+      stickyHeader($(this));
+    });
+  });
+
+  function stickyHeader (w){
+    if (w.scrollTop() > headerHeight && window.innerWidth > 1200) {
       $('.pg-header').next().css('margin-top', headerHeight);
       $('.pg-header > .container').addClass('hidden');
       $('.pg-header').affix({
@@ -89,17 +107,10 @@ $(function() {
         }
       })
     } else {
-      $('.pg-header').next().css('margin-top', 0);
+      $('.pg-header').removeClass('affix').next().css('margin-top', 0);
       $('.pg-header > .container').removeClass('hidden');
     }
-
-    // Arrow Up appearance
-    if ($(this).scrollTop() > 350) {
-      $("#arrowUp").fadeIn();
-    } else {
-      $("#arrowUp").fadeOut();
-    }
-  })
+  }
 
   /*===================== INPUT NUMBERS =====================*/
   var pressTimeout = null,
@@ -161,7 +172,7 @@ $(function() {
 
   $('#price-range').slider({
     range: true,
-    min: 0,
+    min: 2499,
     max: 2999,
     values: [2499, 2874],
     slide: function(event, ui) {
@@ -169,7 +180,17 @@ $(function() {
       $('input[name="price-to"]').val(ui.values[1]);
     }
   });
-  $('input[name="price-from"]').val($('#price-range').slider('values', 0))
+  $('input[name="price-from"]').val($('#price-range').slider('values', 0));
+
+  var sliderMin = $('#price-range').slider('option', 'min'),
+      sliderMax = $('#price-range').slider('option', 'max'),
+      sliderDiff = Math.floor((sliderMax - sliderMin)/4);
+
+  $('.range__step--0').text(sliderMin);
+  $('.range__step--4').text(sliderMax);
+  for (var i=1; i<4; i++){
+    $('.range__step--' + i).text(sliderMin + sliderDiff*i);
+  }
 
   /*===================== CALENDAR =====================*/
   $.datepicker.regional['ru'] = {

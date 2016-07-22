@@ -23,6 +23,7 @@
 }
 html,
 body {
+  min-width: 1170px;
   width: 100%;
   height: 100%;
 }
@@ -62,6 +63,15 @@ input[type="radio"]:active {
   margin: 0 0 20px 0;
   padding-bottom: 10px;
 }
+.sales-text {
+  border: 1px solid #b9b9b9;
+  background-color: #f9f9f9;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1;
+  padding: 15px;
+  color: #333333;
+}
 @font-face {
   font-family: 'DINCondensed';
   src: url('../fonts/DINCondensed.eot?#iefix') format('embedded-opentype'), url('../fonts/DINCondensed.otf') format('opentype'), url('../fonts/DINCondensed.woff') format('woff'), url('../fonts/DINCondensed.woff2') format('woff2'), url('../fonts/DINCondensed.ttf') format('truetype'), url('../fonts/DINCondensed.svg#DINCondensed') format('svg');
@@ -84,7 +94,7 @@ input[type="radio"]:active {
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 10000;
+  z-index: 800;
 }
 .pg-header__nav-list {
   padding: 0;
@@ -164,16 +174,12 @@ input[type="radio"]:active {
   margin-right: 13px;
   float: left;
 }
-.sidebar__content {
-  background: #f9f9f9;
-  padding: 20px 30px;
-}
 .sidebar__title {
   font-size: 17.999996px;
   padding-bottom: 15px;
 }
 .sidebar__categories {
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 }
 .sidebar__categories-title {
   line-height: 67px;
@@ -189,7 +195,7 @@ input[type="radio"]:active {
   padding: 0;
 }
 .sidebar__categories-ul > li {
-  padding: 15px 10px;
+  padding: 13px 5px;
   border-bottom: 1px solid #dbdbdb;
   line-height: 1;
   margin: 0;
@@ -341,10 +347,6 @@ input[type="radio"]:active {
   padding: 30px;
   text-align: center;
 }
-.filter {
-  padding: 25px;
-  background: #f9f9f9;
-}
 .filter__block + .filter__block {
   margin-top: 10px;
 }
@@ -396,7 +398,6 @@ input[type="radio"]:active {
 }
 .filter__btn-group {
   margin-top: 15px;
-  margin-left: -25px;
 }
 .pg-title {
   margin-top: 0;
@@ -407,7 +408,8 @@ input[type="radio"]:active {
   color: #1a2791;
 }
 .cat-toggle {
-  line-height: 14px;
+  line-height: 20px;
+  padding-right: 15px;
 }
 .cat-toggle__view {
   display: inline-block;
@@ -427,6 +429,9 @@ input[type="radio"]:active {
 }
 .cat-toggle__view--list.active {
   background: url(../img/toggle-list-active.png) no-repeat 0 0;
+}
+.sorter {
+  padding-left: 0;
 }
 .sorter label {
   margin-left: 10px;
@@ -634,7 +639,7 @@ input[type="radio"]:active {
   text-decoration: line-through;
 }
 .goods__new-price {
-  font-size: 17.999996px;
+  font-size: 22px;
   font-weight: 700;
   color: #1a2791;
 }
@@ -973,8 +978,8 @@ input[type="radio"]:active {
   margin-bottom: 3px;
 }
 .breadcrumb {
-  margin-bottom: 0;
   padding-left: 0;
+  padding-bottom: 0;
   font-size: 12.000002px;
   border-radius: 0;
 }
@@ -1154,10 +1159,14 @@ input[type="radio"]:active {
 }
 .catlist__title > a {
   display: block;
-  font-size: 24.000004px;
-  line-height: 40px;
-  font-family: "DINCondensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 67px;
+  font-family: 'Arial', sans-serif;
   text-transform: uppercase;
+  color: #ffffff;
+  background-color: #a5a8bc;
+  padding: 0 20px;
+  margin: 0;
 }
 .catlist__title > a:hover,
 .catlist__title > a:visited {
@@ -1165,11 +1174,11 @@ input[type="radio"]:active {
 }
 .catlist__title.open > a,
 .catlist__title.open > a:visited {
-  color: #afb5e8;
+  color: #ffffff;
 }
 .catlist__title--no-dropdown.open > a,
 .catlist__title--no-dropdown.open > a:visited {
-  color: #1a2791;
+  color: #ffffff;
 }
 .catlist__title::after {
   display: block;
@@ -1177,6 +1186,7 @@ input[type="radio"]:active {
   content: "\f103";
   font-size: 24.000004px;
   cursor: pointer;
+  color: #ffffff;
   position: absolute;
   top: 50%;
   right: 20px;
@@ -1194,56 +1204,36 @@ input[type="radio"]:active {
   padding-right: 40px;
 }
 .catlist__title .dropdown-menu {
+  margin: 0;
+  padding: 0;
   border: 0;
   border-radius: 0;
-  margin: 0;
-  border-top: 2px solid #ffffff;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
   box-shadow: none;
-  background-color: #e7ecf4;
+  background-color: #ffffff;
   width: 100%;
-  padding-bottom: 15px;
 }
 .catlist__title .dropdown-menu > li {
-  padding-top: 1px;
-  padding-bottom: 1px;
+  padding: 13px 5px;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 1;
+  margin: 0;
 }
 .catlist__title .dropdown-menu > li > a {
-  display: block;
-  color: #1a2791;
-  padding-left: 30px;
-  padding-right: 30px;
+  line-height: 1;
+  padding: 0 0 0 10px;
+  color: #3f4470;
   text-decoration: none;
 }
-.catlist__title .dropdown-menu > li:hover > a {
-  background-color: #f9f9f9;
+.catlist__title .dropdown-menu > li > a:hover {
+  background-color: transparent;
+  color: #afb5e8;
+  text-decoration: none;
 }
 .catlist__title .dropdown-menu > .active > a {
   background-color: transparent;
-  color: #1a2791;
   font-weight: 700;
-}
-.catlist__title .dropdown-menu::after {
-  display: block;
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 155px solid transparent;
-  border-right: 155px solid transparent;
-  border-top: 55px solid #e7ecf4;
-  position: absolute;
-  left: 0;
-  bottom: -55px;
-}
-.catlist__title--no-dropdown:after {
-  content: "";
-}
-.catlist__title--no-dropdown > .dropdown-menu {
-  display: block !important;
-}
-.catlist__subtitle {
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 20px 30px 0;
 }
 .btn {
   text-decoration: none;
@@ -1337,6 +1327,9 @@ input[type="radio"]:active {
   color: #1a2791;
   font-size: 0;
 }
+.paginator__block {
+  padding-right: 0;
+}
 .paginator--top {
   margin-bottom: 25px;
 }
@@ -1354,6 +1347,9 @@ input[type="radio"]:active {
 }
 .paginator a:hover {
   border-bottom-color: transparent;
+}
+.form-control:focus {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(200, 200, 200, 0.6);
 }
 .select-custom {
   padding-left: 5px;
@@ -1960,7 +1956,7 @@ input[type="radio"]:active {
 .range__controls {
   padding-top: 45px;
   padding-left: 24.9px;
-  padding-right: 24.9px;
+  padding-right: 100px;
   position: relative;
 }
 .filter__range .range__controls {
@@ -2045,7 +2041,7 @@ input[type="radio"]:active {
 }
 .range__price-inputs {
   font-size: 0;
-  width: 90%;
+  width: 70%;
   position: relative;
 }
 .range__price-inputs::after {

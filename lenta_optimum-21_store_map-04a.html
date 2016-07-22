@@ -90,7 +90,7 @@
           <div class="catlist">
             <div class="catlist__inner">
               <div class="catlist__title dropdown">
-                <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Полный каталог товаров</a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Категории</a>
                 <ul class="dropdown-menu">
                   <li class="catalog__item-name--promo active"><a href="#">Промо-предложения</a></li>
                   <li><a href="#">Вина</a></li>
@@ -112,10 +112,10 @@
             <div class="input-group">
               <input type="search" class="form-control" placeholder="Поиск по товарам">
               <span class="input-group-btn">
-                <button class="btn" type="button">
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-              </span>
+                  <button class="btn" type="button">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </span>
             </div>
           </div>
         </div>
@@ -123,19 +123,21 @@
           <div class="col-xs-12">
             <ol class="breadcrumb">
               <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-              <li class="active">Пункты самовывоза</li>
+              <li><a href="catalog.html">Каталог товаров</a></li>
+              <li class="active">Бытовая химия, хозяйственные товары</li>
             </ol>
           </div>
         </div>
       </div>
     </div>
 
+
     <div class="main-content">
       <div class="container">
         <div class="sidebar">
           <div class="sidebar__content">
-            <p class="sidebar__title">Регионы</p>
-            <ul class="list-unstyled  reglist">
+            <h4 class="heading--small">Регионы</h4>
+            <ul class="list-unstyled reglist">
               <li class="reglist__item  reglist__item--active">
                 Санкт-Петербург
                 <span class="reglist__num">(10)</span>
@@ -160,7 +162,7 @@
           </div>
         </div>
         <main class="contentarea">
-          <h1 class="pg-title">Адреса пунктов самовывоза в регионе Санкт-Петербург</h1>
+          <h1 class="heading--small">Адреса пунктов самовывоза в регионе Санкт-Петербург</h1>
 
           <div class="store-map" id="store-map"></div>
           <ul id="store-map__list" class="row"></ul>
